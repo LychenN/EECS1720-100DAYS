@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/css/button_style.css" type="text/css">
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://rawcdn.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	</head>
+
+
+	<!-- TOP BUTTON FOR REDIRECT TO INFO HUB -->
+	<div style='position: fixed; bottom: 15px; width:100%; text-align: center; z-index: 1;'>
+		<button id="creatureSite">CLICK HERE FOR THE CREATURE INFORMATION HUB!</button>
+	</div>
+
+	<!-- import handle.js script -->
+	<script src="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/js/handle.js"></script>
+
+	<body style='margin : 0px; overflow: hidden;'>
+
+		<a-scene
+		arjs="sourceType: webcam; debugUIEnabled: false;"
+		embedded
+		renderer="logarithmicDepthBuffer: true;"
+		vr-mode-ui="enabled: false"
+		id="scene">
+			<a-assets>
+				<a-asset-item id="custom-model1" src="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/models/arthropleura.gltf"></a-asset-item>
+				<a-asset-item id="custom-model2" src="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/models/scorpionModel.gltf"></a-asset-item>
+				<a-asset-item id="custom-model3" src="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/models/dragonflyModel.gltf"></a-asset-item>
+				<a-asset-item id="custom-model4" src="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/models/arthrolycosa_antiqua_model.gltf"></a-asset-item>
+				<a-asset-item id="custom-model5" src="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/models/lactrodectus_hasselti_model.gltf"></a-asset-item>
+				<a-asset-item id="custom-model6" src="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/models/proterogyrinus_scheelei_model.gltf"></a-asset-item>
+			</a-assets>
+
+
+			<!-- ARTHROPLEURA MODEL & ASSOCIATED MARKER -->
+			<a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="custom-1" type="pattern" url="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/markers/pattern-marker1.patt">
+				<a-entity id="gltf" position="-1.5 0.5 0" scale="0.5 0.5 0.5" gltf-model="#custom-model1" rotation="-90 0 0"></a-entity>
+			</a-marker>
+
+			<!-- SCORPION MODEL & ASSOCIATED MARKER -->
+			<a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="custom-2" type="pattern" url="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/markers/pattern-marker2.patt">
+				<a-entity id="gltf" position="-1.5 0.5 0" scale="0.5 0.5 0.5" gltf-model="#custom-model2" rotation="-90 0 0"></a-entity>
+			</a-marker>
+
+			<!-- DRAGONFLY MODEL & ASSOCIATED MARKER -->
+			<a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="custom-3" type="pattern" url="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/markers/pattern-marker3.patt">
+				<a-entity id="gltf" position="-1.5 0.5 0" scale="0.5 0.5 0.5" gltf-model="#custom-model3" rotation="-90 0 0"></a-entity>
+			</a-marker>
+
+			<!-- 1ST SPIDER MODEL & ASSOCIATED MARKER -->
+			<a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="custom-4" type="pattern" url="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/markers/pattern-marker4.patt">
+				<a-entity id="gltf" position="-1.5 0.5 0" scale="0.5 0.5 0.5" gltf-model="#custom-model4" rotation="-90 0 0"></a-entity>
+			</a-marker>
+
+			<!-- 2ND SPIDER MODEL & ASSOCIATED MARKER -->
+			<a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="custom-5" type="pattern" url="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/markers/pattern-marker5.patt">
+				<a-entity id="gltf" position="-1.5 0.5 0" scale="0.5 0.5 0.5" gltf-model="#custom-model5" rotation="-90 0 0"></a-entity>
+			</a-marker>
+
+			<!-- LIZARD MODEL & ASSOCIATED MARKER -->
+			<a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="custom-6" type="pattern" url="https://raw.githack.com/robots-make-art-too/Group11-CreatureStudy/gh-pages/docs/website/assets/markers/pattern-marker6.patt">
+				<a-entity id="gltf" position="-1.5 0.5 0" scale="1 1 1" gltf-model="#custom-model6" rotation="90 180 0"></a-entity>
+			</a-marker>
+
+			<!-- used "<a-entity camera>"" to support multiple-markers -->
+			<a-entity camera></a-entity>
+
+		</a-scene>
+
+
+	</body>
+</html>
